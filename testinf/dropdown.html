@@ -4,16 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container" class="slides">
       <div class="controllerContainer">
-        <div class="controller" id="forward" onclick="changeSliderFocus(1)">
-          >
-        </div>
-        <div class="controller" id="backward" onclick="changeSliderFocus(-1)">
-          <
-        </div>
         <div class="slides" id="slider">
           <div id="slide-1">
             <div class="dropdown">
@@ -49,16 +44,29 @@
 
       let currentSlide = 0;
       document.getElementsByClassName("refs")[0].click();
+      const sliderChildren = document.getElementById("slider").children;
 
       const changeSliderFocus = (n) => {
         try {
-          const sliderChildren = document.getElementById("slider").children;
           currentSlide + n > -1 && currentSlide + n < sliderChildren.length
             ? (currentSlide += n)
             : {};
           document.getElementsByClassName("refs")[currentSlide].click();
         } catch {}
       };
+
+      setInterval(function () {
+        if (currentSlide != sliderChildren.length - 1) {
+          changeSliderFocus(1);
+          console.log("a");
+        } else {
+          currentSlide = 0;
+          changeSliderFocus(0);
+          console.log("b");
+        }
+
+        console.log(currentSlide != sliderChildren.length - 1);
+      }, 2000);
     </script>
   </body>
 </html>

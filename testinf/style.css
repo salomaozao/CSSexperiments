@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.dropdown-content {
+  display: block;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.dropdown.on > .dropdown-content {
+  opacity: 1;
+}
+
+/* ============== */
+.slider {
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slider > a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+}
+
+.slider > a:active {
+  top: 1px;
+}
+
+.slider > a:focus {
+  background: #000;
+}
+
+.slides {
+  width: 20em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  scroll-snap-stop: center;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-align: center;
+  -ms-scroll-snap-points-x: repeat(300px);
+      scroll-snap-points-x: repeat(300px);
+  -ms-scroll-snap-type: mandatory;
+      scroll-snap-type: mandatory;
+  scrollbar-color: transparent transparent;
+  /* thumb and track color */
+  scrollbar-width: 0px;
+}
+
+.slides > div {
+  min-width: 20em;
+  min-height: 20em;
+  scroll-snap-align: center;
+  margin: 0 1.5em;
+  border-radius: 10px;
+  background: #eee;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slides > div:first-child {
+  margin-left: 3em;
+}
+
+.slides > div:last-child {
+  margin-right: 3em;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Don't need button navigation */
+@supports ((-ms-scroll-snap-type: mandatory) or (scroll-snap-type: mandatory)) {
+  .slider > a {
+    display: none;
+  }
+}
+
+.controllerContainer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.controllerContainer > .controller {
+  position: absolute;
+  top: 50%;
+}
+
+.controllerContainer > .controller#forward {
+  left: calc(50vw + 11rem);
+}
+
+.controllerContainer > .controller#backward {
+  left: calc(50vw - 11rem);
+}
