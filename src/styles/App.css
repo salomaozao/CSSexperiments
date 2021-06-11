@@ -1,0 +1,18 @@
+.clock > .row > *:not(:first-child)::before {
+  content: ":";
+}
+
+.date > .row > *:not(:first-child)::before {
+  content: "/";
+}
+
+.temperature > #temp_val:not(.loading)::after {
+  content: "°";
+}
+
+body {
+  /* background-image: url("..."); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
