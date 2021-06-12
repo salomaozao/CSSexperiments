@@ -16,8 +16,8 @@ const Calendar = () => {
     weekday: weekdays[date.getDay()],
   };
   return (
-    <div className="date">
-      <div className="row">
+    <div className="date center-x center-y">
+      <div className="row title">
         <span>{today.day}</span>
         <span>{today.month + 1}</span>
       </div>

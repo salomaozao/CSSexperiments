@@ -11,11 +11,10 @@ const Clock = () => {
 
   return (
     <div className="clock">
-      <div className="row">
-        <span>{hour}</span>
-        <span>{min}</span>
+      <div className="row center-x">
+        <span className="title">{hour}</span>
+        <span className="title">{min}</span>
       </div>
-      <span className="lead">Bom dia!</span>
     </div>
   );
 };

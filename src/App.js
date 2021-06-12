@@ -1,4 +1,5 @@
 import "./styles/App.css";
+import "./styles/util.css";
 
 import Clock from "./components/clock";
 import Calendar from "./components/date";
@@ -8,10 +9,13 @@ import Aside from "./components/aside";
 function App() {
   return (
     <div>
-      <Clock />
-      <Calendar />
-      <Temperature />
-      <Aside />
+      {/* <Aside /> */}
+
+      <div class="row center-self center-x">
+        <Temperature />
+        <Clock />
+        <Calendar />
+      </div>
     </div>
   );
 }

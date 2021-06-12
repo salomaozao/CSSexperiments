@@ -25,8 +25,11 @@ const Temperature = () => {
   getWeather();
 
   return (
-    <div className="temperature">
-      <span id="temp_val" className="loading">
+    <div className="temperature center-x center-y">
+      <span
+        id="temp_val"
+        className={tempVal != "Loading" ? "title" : "loading title"}
+      >
         {tempVal}
       </span>
       <span className="small">{cityName}</span>

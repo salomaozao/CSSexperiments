@@ -14,17 +14,40 @@ form {
   flex-direction: column;
 }
 
+w-100 {
+  width: 100;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
 .row {
-  flex-direction: row;
+  display: flex;
+  flex-direction: row !important;
 }
 
 .row > * + * {
   margin-top: 0;
 }
 
-.aside {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 10vh;
+.col {
+  display: flex;
+  flex-direction: column !important;
+}
+
+.center-x {
+  justify-items: center;
+  justify-content: center;
+}
+.center-x {
+  align-items: center;
+  align-content: center;
+}
+
+.center-self {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
 }

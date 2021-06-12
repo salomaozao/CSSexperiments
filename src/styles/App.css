@@ -11,8 +11,23 @@
 }
 
 body {
-  /* background-image: url("..."); */
+  background-image: url("https://wallpaperaccess.com/full/556526.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.aside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10vh;
+}
+
+.aside,
+.clock,
+.date,
+.temperature {
+  width: 10em;
+  text-align: center;
 }
