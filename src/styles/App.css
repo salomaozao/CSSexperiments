@@ -16,12 +16,20 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+/* ASIDE STYLES */
 .aside {
   position: absolute;
   top: 0;
   left: 0;
-  height: 10vh;
+  height: 100vh;
+  min-width: 5em;
+  background: #000;
+}
+
+.aside-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .aside,

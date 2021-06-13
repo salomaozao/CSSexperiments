@@ -10,7 +10,7 @@ import AppsRow from "./components/appsRow";
 function App() {
   return (
     <div>
-      {/* <Aside /> */}
+      <Aside />
 
       <div className="row center-self center-x mt-2">
         <Temperature />

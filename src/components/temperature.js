@@ -7,7 +7,6 @@ const Temperature = () => {
   const [tempVal, setTempVal] = React.useState("Loading");
 
   async function getWeather() {
-    //Vários requests?
     fetch(
       `http://api.weatherapi.com/v1/current.json?key=${SECRET_API_KEY}&q=${cityName}&aqi=no`
     )
@@ -28,7 +27,7 @@ const Temperature = () => {
     <div className="temperature center-x center-y">
       <span
         id="temp_val"
-        className={tempVal != "Loading" ? "title" : "loading title"}
+        className={tempVal !== "Loading" ? "title" : "loading title"}
       >
         {tempVal}
       </span>
